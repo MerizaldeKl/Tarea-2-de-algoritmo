@@ -1,0 +1,33 @@
+//Proceso ContarNegativos
+//    Definir n, numero, contadorNegativos como enteros
+//    contadorNegativos ← 0
+
+//    Escribir "Ingrese cuántos números desea ingresar:"
+//    Leer n
+
+//    Para i desde 1 hasta n hacer
+//        Escribir "Ingrese el número ", i, ":"
+//        Leer numero
+
+//        Si numero < 0 Entonces
+//            contadorNegativos ← contadorNegativos + 1
+//        FinSi
+//   FinPara
+
+//    Escribir "Cantidad de negativos: ", contadorNegativos
+//FinProceso
+function contarNegativos() {
+  let n = parseInt(prompt("Ingrese cuántos números desea ingresar:"));
+  let contadorNegativos = 0;
+
+  for (let i = 1; i <= n; i++) {
+    let numero = parseFloat(prompt("Ingrese el número " + i + ":"));
+    if (numero < 0) {
+      contadorNegativos++;
+    }
+  }
+
+  alert("Cantidad de negativos: " + contadorNegativos);
+}
+
+contarNegativos();

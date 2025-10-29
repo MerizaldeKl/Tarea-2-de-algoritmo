@@ -1,0 +1,26 @@
+function Lol() {
+    let oracion = prompt("Ingrese la frase.");
+    if(!oracion){
+        alert("Error: Ingrese la frase.");
+        return;
+    }
+    let conteo = 0;
+    for(let i = 0; i < oracion.length; i++){
+        conteo++
+    }
+    alert(`La frase tiene ${conteo} caracteres.`)
+
+}   
+Lol()
+// Boceto
+//Entrada: oracion
+//Proceso: Leer oracion
+// Si oracion = ""
+// Escribir Error: Ingrese la frase.
+//Fin Si.
+// Definir conteo = 0
+//Para i = 0; oracion.longitud; i++
+// conteo++
+// Fin Para.
+//Salida: Escribir
+//         La frase tiene "conteo" caracteres.

@@ -1,0 +1,20 @@
+//Proceso ContarCaracteres
+//    Definir frases como arreglo = ["La tecnología avanza", "Innovar para crecer", "Calidad garantizada"]
+
+//    Para i desde 0 hasta longitud(frases) - 1 hacer
+//        frase ← frases[i]
+//        cantidad ← longitud(frase)
+//        Mostrar "La frase '" + frase + "' tiene " + cantidad + " caracteres."
+//    FinPara
+//FinProceso
+function contarCaracteres() {
+  let frases = ["La tecnología avanza", "Innovar para crecer", "Calidad garantizada"];
+
+  for (let i = 0; i < frases.length; i++) {
+    let frase = frases[i];
+    let cantidad = frase.length;
+    alert(`"${frase}" → ${cantidad} caracteres`);
+  }
+}
+
+contarCaracteres();

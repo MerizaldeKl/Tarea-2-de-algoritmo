@@ -1,0 +1,25 @@
+//BOCETO
+//Entrada: palabra(leer)
+//Proceso: Leer palabra
+// Si (palabra = "")
+// Escribir "Ingrese la palabra"
+// FinSi.
+// Definir invertido = ""
+// Para (definir i = palabra.longitud-1; i>= 0; i--)
+// invertido += palabra[i]
+// FinPara
+//Salida: Escribir
+//        El resultado es "invertido".
+function invertido() {
+    let palabra = prompt("Ingrese la palabra.")
+    if(!palabra){
+        alert("Error: Ingrese la palabra.");
+        return;
+    }
+    let invertido = ""
+    for(let i = palabra.length - 1; i >= 0; i--){
+        invertido += palabra[i];
+    }
+    alert(`El texto queda asi: ${invertido.toLowerCase()}.`)
+}
+invertido()

@@ -1,0 +1,39 @@
+function Contar() {
+  let ciudad1 = prompt("Ingrese la primer ciudad:");
+  let ciudad2 = prompt("Ingrese la segunda ciudad:");
+
+  if (!ciudad1 || !ciudad2) {
+    alert("No ingresaste una o ambas ciudades.");
+    return;
+  }
+
+  if (ciudad1.length > ciudad2.length) {
+    alert(`${ciudad1} tiene más letras.`);
+  } else if (ciudad2.length > ciudad1.length) {
+    alert(`${ciudad2} tiene más letras.`);
+  } else {
+    alert(`Las ciudades ${ciudad1} y ${ciudad2} tienen la misma cantidad de letras.`);
+  }
+}
+Contar()
+//Algoritmo Contar
+//   Definir ciudad1, ciudad2 Como Cadena
+//  Escribir "Ingrese la primera ciudad:"
+//    Leer ciudad1
+//    Escribir "Ingrese la segunda ciudad:"
+//    Leer ciudad2
+
+//    Si ciudad1 = "" O ciudad2 = "" Entonces
+//        Escribir "No ingresaste una o ambas ciudades."
+//   Sino
+//        Si Longitud(ciudad1) > Longitud(ciudad2) Entonces
+//            Escribir ciudad1, " tiene más letras."
+//        Sino
+//            Si Longitud(ciudad2) > Longitud(ciudad1) Entonces
+//                Escribir ciudad2, " tiene más letras."
+//            Sino
+//                Escribir "Las ciudades ", ciudad1, " y ", ciudad2, " tienen la misma cantidad de letras."
+//            FinSi
+//        FinSi
+//    FinSi
+//FinAlgoritmo

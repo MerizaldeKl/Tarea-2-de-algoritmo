@@ -1,0 +1,57 @@
+//Inicio
+//  Escribir "¿Cuántas personas hay?"
+//  Leer n
+
+//  sumaMayores ← 0
+//  sumaMenores ← 0
+//  contMayores ← 0
+//  contMenores ← 0
+
+//  Para i ← 1 Hasta n Hacer
+//      Escribir "Ingrese la edad ", i, ":"
+//      Leer edad
+
+//      Si edad ≥ 18 Entonces
+//         sumaMayores ← sumaMayores + edad
+//          contMayores ← contMayores + 1
+//      Sino
+//          sumaMenores ← sumaMenores + edad
+//          contMenores ← contMenores + 1
+//      FinSi
+//  FinPara
+
+//  promedioMayores ← sumaMayores / contMayores
+//  promedioMenores ← sumaMenores / contMenores
+
+//  Escribir "Promedio de mayores de edad: ", promedioMayores
+//  Escribir "Promedio de menores de edad: ", promedioMenores
+//Fin
+function promedioEdades() {
+  let n = parseInt(prompt("¿Cuántas personas hay?"));
+  
+  let sumaMayores = 0;
+  let sumaMenores = 0;
+  let contMayores = 0;
+  let contMenores = 0;
+
+  for (let i = 1; i <= n; i++) {
+    let edad = parseInt(prompt("Ingrese la edad " + i + ":"));
+    
+    if (edad >= 18) {
+      sumaMayores = sumaMayores + edad;
+      contMayores = contMayores + 1;
+    } else {
+      sumaMenores = sumaMenores + edad;
+      contMenores = contMenores + 1;
+    }
+  }
+
+  let promMayores = sumaMayores / contMayores;
+  let promMenores = sumaMenores / contMenores;
+
+  alert("Promedio de mayores de edad: " + promMayores.toFixed(2));
+  alert("Promedio de menores de edad: " + promMenores.toFixed(2));
+}
+
+promedioEdades();
+

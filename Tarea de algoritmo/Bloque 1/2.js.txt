@@ -1,0 +1,31 @@
+//BOCETO
+//Entrada: frase(leer), letra(leer)
+//Proceso: Leer frase, letra
+// Si (letra, frase = "")
+// Escribir "Error: Ingrese la frase o letra"
+// Fin Si.
+// Definir aparicion = 0
+// Para (definir i = 0; i < frase.longitud; i++)
+// Si(frase[i] == letra)
+// aparicion++
+// Sino
+// Escribir "No aparece la letra"
+// FinSi.
+//Salida: Escribir
+//        La letra "letra" aparece "aparicion" veces en la frase.
+function Ey() {
+    let frase = prompt("Ingrese la frase");
+    let letra = prompt("Ingrese la letra.");
+    if(!frase | !letra){
+        alert("Error ingrese la frase o letra.");
+        return;
+    }
+    let aparicion = 0
+    for(let i = 0; i < frase.length; i++){
+        if(frase[i].toLowerCase() == letra.toLowerCase()){
+            aparicion++
+    } 
+}
+alert(`La letra ${letra} aparece ${aparicion} veces en la oracion.`)
+}
+Ey();

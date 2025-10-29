@@ -1,0 +1,26 @@
+//Proceso CiudadMasLarga
+//    Definir ciudades como arreglo = ["Milagro", "Guayaquil", "Quito", "Cuenca"]
+//    mayor ← ciudades[0]
+
+//    Para i desde 1 hasta longitud(ciudades) - 1 hacer
+//        Si longitud(ciudades[i]) > longitud(mayor) Entonces
+//            mayor ← ciudades[i]
+//        FinSi
+//    FinPara
+
+//    Mostrar "La ciudad con más letras es '" + mayor + "' (" + longitud(mayor) + " letras)."
+//FinProceso
+function ciudadMasLarga() {
+  let ciudades = ["Milagro", "Guayaquil", "Quito", "Cuenca"];
+  let mayor = ciudades[0]; // asumimos la primera como la más larga al inicio
+
+  for (let i = 1; i < ciudades.length; i++) {
+    if (ciudades[i].length > mayor.length) {
+      mayor = ciudades[i];
+    }
+  }
+
+  alert(`La ciudad con más letras es '${mayor}' (${mayor.length} letras).`);
+}
+
+ciudadMasLarga();

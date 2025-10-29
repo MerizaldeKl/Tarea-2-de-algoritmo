@@ -1,0 +1,47 @@
+//Proceso PromedioMayoresA70
+//    Definir n, nota, suma, contador, promedio como reales
+//    suma ← 0
+//    contador ← 0
+
+//    Escribir "Ingrese número de calificaciones:"
+//    Leer n
+
+//    Para i desde 1 hasta n hacer
+//        Escribir "Ingrese la nota ", i, ":"
+//        Leer nota
+
+//        Si nota >= 70 Entonces
+//            suma ← suma + nota
+//            contador ← contador + 1
+//        FinSi
+//    FinPara
+
+//    Si contador > 0 Entonces
+//        promedio ← suma / contador
+//        Escribir "Promedio de notas ≥ 70: ", promedio
+//    Sino
+//        Escribir "No hay notas mayores o iguales a 70."
+//    FinSi
+//FinProceso
+function promedioMayoresA70() {
+  let n = parseInt(prompt("Ingrese número de calificaciones:"));
+  let suma = 0;
+  let contador = 0;
+
+  for (let i = 1; i <= n; i++) {
+    let nota = parseFloat(prompt("Ingrese la nota " + i + ":"));
+    if (nota >= 70) {
+      suma += nota;
+      contador++;
+    }
+  }
+
+  if (contador > 0) {
+    let promedio = suma / contador;
+    alert("Promedio de notas ≥ 70: " + promedio.toFixed(2));
+  } else {
+    alert("No hay notas mayores o iguales a 70.");
+  }
+}
+
+promedioMayoresA70();

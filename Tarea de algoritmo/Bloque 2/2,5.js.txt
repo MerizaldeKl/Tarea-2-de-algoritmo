@@ -1,0 +1,34 @@
+//Proceso InicialesCargos
+//    Definir cargos como arreglo = ["Director General Académico", "Jefe de Laboratorio", "Asistente Administrativo"]
+
+//    Para i desde 0 hasta longitud(cargos) - 1 hacer
+//        cargo ← cargos[i]
+//       iniciales ← primera letra de cargo
+
+//        Para n desde 0 hasta longitud(cargo) - 1 hacer
+//            Si cargo[n] es igual a espacio Entonces
+//                iniciales ← iniciales + letra siguiente (cargo[n + 1])
+//            FinSi
+//        FinPara
+
+//        Mostrar cargo + " → " + iniciales en mayúsculas separadas por puntos
+//    FinPara
+//FinProceso
+function inicialesCargos() {
+  let cargos = ["Director General Académico", "Jefe de Laboratorio", "Asistente Administrativo"];
+
+  for (let i = 0; i < cargos.length; i++) {
+    let cargo = cargos[i];
+    let iniciales = cargo[0]; // primera letra del primer nombre
+
+    for (let n = 0; n < cargo.length; n++) {
+      if (cargo[n] === " ") {
+        iniciales += cargo[n + 1]; // letra después del espacio
+      }
+    }
+
+    alert(`"${cargo}" → ${iniciales.toUpperCase().split("").join(".")}.`);
+  }
+}
+
+inicialesCargos();

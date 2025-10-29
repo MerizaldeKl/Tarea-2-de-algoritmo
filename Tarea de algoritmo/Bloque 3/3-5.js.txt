@@ -1,0 +1,73 @@
+//Inicio
+//  Escribir "Ingrese la cantidad de números:"
+//  Leer n
+
+//  Si n <= 0 Entonces
+//    Escribir "Error: cantidad no válida"
+//    Fin
+//  FinSi
+
+//  sumaPares ← 0
+//  sumaImpares ← 0
+//  contPares ← 0
+//  contImpares ← 0
+
+//  Para i ← 1 Hasta n Hacer
+//    Escribir "Ingrese el número ", i, ":"
+//   Leer num
+
+//    Si num MOD 2 = 0 Entonces
+//      sumaPares ← sumaPares + num
+//      contPares ← contPares + 1
+//    Sino
+//      sumaImpares ← sumaImpares + num
+//      contImpares ← contImpares + 1
+//    FinSi
+//  FinPara
+
+//  Si contPares > 0 Entonces
+//    promPares ← sumaPares / contPares
+//  Sino
+//    promPares ← 0
+//  FinSi
+
+//  Si contImpares > 0 Entonces
+//    promImpares ← sumaImpares / contImpares
+//  Sino
+//    promImpares ← 0
+//  FinSi
+
+//  Escribir "Promedio de pares: ", promPares
+// Escribir "Promedio de impares: ", promImpares
+//Fin
+function Promedios() {
+  let n = parseInt(prompt("Ingrese la cantidad de números:"));
+  
+  if (isNaN(n) || n <= 0) {
+    alert("Error: Ingrese una cantidad válida.");
+    return;
+  }
+
+  let sumaPares = 0, sumaImpares = 0;
+  let contPares = 0, contImpares = 0;
+
+  for (let i = 1; i <= n; i++) {
+    let num = parseInt(prompt(`Ingrese el número ${i}:`));
+
+    if (num % 2 === 0) {
+      sumaPares += num;
+      contPares++;
+    } else {
+      sumaImpares += num;
+      contImpares++;
+    }
+  }
+
+  let promPares = contPares > 0 ? (sumaPares / contPares).toFixed(2) : 0;
+  let promImpares = contImpares > 0 ? (sumaImpares / contImpares).toFixed(2) : 0;
+
+  alert(`Promedio de pares: ${promPares}\nPromedio de impares: ${promImpares}`);
+}
+
+Promedios();
+

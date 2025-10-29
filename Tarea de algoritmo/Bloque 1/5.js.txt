@@ -1,0 +1,40 @@
+//Inicio
+//    Escribir "Ingrese el cargo profesional:"
+//    Leer cargo
+
+//    Si cargo está vacío Entonces
+//        Escribir "Error: No ingresó el cargo."
+//    Sino
+//        iniciales ← primera letra de cargo
+//
+//        Para i desde 0 hasta longitud(cargo) - 1 hacer
+//            Si cargo[i] = " " Entonces
+//                iniciales ← iniciales + siguiente letra (cargo[i + 1])
+//            FinSi
+//        FinPara
+
+//        Convertir iniciales a mayúsculas
+//        Escribir "Iniciales: " + iniciales + "."
+//    FinSi
+//Fin
+function obtenerIniciales() {
+  let cargo = prompt("Ingrese el cargo profesional:");
+  
+  if (!cargo) {
+    alert("Error: No ingresó el cargo.");
+    return;
+  }
+
+  let iniciales = cargo[0].toUpperCase() + ".";
+
+  for (let i = 0; i < cargo.length; i++) {
+    if (cargo[i] === " ") {
+      iniciales += cargo[i + 1].toUpperCase() + ".";
+    }
+  }
+
+  alert(`Iniciales: ${iniciales}`);
+}
+
+obtenerIniciales();
+

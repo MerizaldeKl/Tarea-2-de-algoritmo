@@ -1,0 +1,29 @@
+//Inicio
+//  Escribir "Ingrese un número:"
+//  Leer num
+
+//  Escribir "Tabla del ", num, ":"
+
+//  Para i ← 1 Hasta 10 Hacer
+//      resultado ← num * i
+//      Escribir num, " × ", i, " = ", resultado
+//  FinPara
+//Fin
+function Tabla() {
+  let num = parseInt(prompt("Ingrese un número:"));
+  
+  if (isNaN(num)) {
+    alert("Error: Debe ingresar un número válido.");
+    return;
+  }
+
+  let resultado = "Tabla del " + num + ":\n";
+  
+  for (let i = 1; i <= 10; i++) {
+    resultado += `${num} × ${i} = ${num * i}\n`;
+  }
+
+  alert(resultado);
+}
+
+Tabla();

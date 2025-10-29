@@ -1,0 +1,36 @@
+//Proceso ContarVocal
+//    Definir titulos como arreglo = ["Programación avanzada", "Desarrollo web", "Análisis de datos"]
+//    Leer vocal
+
+//    Para i desde 0 hasta longitud(titulos) - 1 hacer
+//        titulo ← titulos[i]
+//        contador ← 0
+
+//        Para n desde 0 hasta longitud(titulo) - 1 hacer
+//            Si minuscula(titulo[n]) = minuscula(vocal) Entonces
+//                contador ← contador + 1
+//           FinSi
+//        FinPara
+
+//        Mostrar titulo + " → " + contador + " veces la '" + vocal + "'"
+//    FinPara
+//FinProceso
+function contarVocal() {
+  let titulos = ["Programación avanzada", "Desarrollo web", "Análisis de datos"];
+  let vocal = prompt("Ingrese la vocal a buscar:").toLowerCase();
+
+  for (let i = 0; i < titulos.length; i++) {
+    let titulo = titulos[i];
+    let contador = 0;
+
+    for (let n = 0; n < titulo.length; n++) {
+      if (titulo[n].toLowerCase() === vocal) {
+        contador++;
+      }
+    }
+
+    alert(`"${titulo}" → ${contador} veces la '${vocal}'`);
+  }
+}
+
+contarVocal();

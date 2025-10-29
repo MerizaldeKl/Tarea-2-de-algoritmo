@@ -1,0 +1,38 @@
+//Inicio
+//  calificaciones ← [65, 80, 90, 50, 75]
+//  suma ← 0
+//  contador ← 0
+
+//  Para i ← 1 Hasta longitud(calificaciones) Hacer
+//    Si calificaciones[i] ≥ 70 Entonces
+//      suma ← suma + calificaciones[i]
+//      contador ← contador + 1
+//    FinSi
+//  FinPara
+
+//  Si contador > 0 Entonces
+//    promedio ← suma / contador
+//  Sino
+//    promedio ← 0
+//  FinSi
+
+//  Escribir "Promedio de calificaciones ≥ 70: ", promedio
+//Fin
+function PromedioMayores70() {
+  let calificaciones = [65, 80, 90, 50, 75];
+
+  let suma = 0;
+  let contador = 0;
+
+  for (let i = 0; i < calificaciones.length; i++) {
+    if (calificaciones[i] >= 70) {
+      suma += calificaciones[i];
+      contador++;
+    }
+  }
+
+  let promedio = contador > 0 ? (suma / contador).toFixed(2) : 0;
+  console.log(`Promedio de calificaciones ≥ 70: ${promedio}`);
+}
+
+PromedioMayores70();

@@ -1,0 +1,30 @@
+//Proceso InvertirProductos
+//    Definir productos como arreglo = ["Laptop", "Celular", "Tablet"]
+
+//    Para i desde 0 hasta longitud(productos) - 1 hacer
+//        producto ← productos[i]
+//        invertido ← ""
+
+//        Para n desde longitud(producto) - 1 hasta 0 con paso -1 hacer
+//            invertido ← invertido + producto[n]
+//        FinPara
+
+//        Mostrar producto + " → " + invertido
+//    FinPara
+//FinProceso
+function invertirProductos() {
+  let productos = ["Laptop", "Celular", "Tablet"];
+
+  for (let i = 0; i < productos.length; i++) {
+    let producto = productos[i];
+    let invertido = "";
+
+    for (let n = producto.length - 1; n >= 0; n--) {
+      invertido += producto[n];
+    }
+
+    alert(`"${producto}" → "${invertido}"`);
+  }
+}
+
+invertirProductos();
