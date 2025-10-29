@@ -1,0 +1,54 @@
+// Entrada: numeros [2, 5, 8, 9, 4, 7], sumaPares = 0, contadorPares = 0, sumaImpares = 0, contadorImpares = 0
+// Proceso
+//Para i = 0 Hasta longitud(numeros) - 1 Hacer
+//Si numeros[i] % 2 = 0 Entonces
+//sumaPares = sumaPares + numeros[i]
+//contadorPares = contadorPares + 1
+//Sino
+//sumaImpares = sumaImpares + numeros[i]
+//contadorImpares = contadorImpares + 1
+//FinSi
+//FinPara
+//Si contadorPares > 0 Entonces
+//promedioPares = sumaPares / contadorPares
+//Sino
+//promedioPares = 0
+//FinSi
+//Si contadorImpares > 0 Entonces
+//promedioImpares = sumaImpares / contadorImpares
+//Sino
+//promedioImpares = 0
+//FinSi
+// Salida
+//Escribir "Promedio de pares: ", promedioPares
+//Escribir "Promedio de impares: ", promedioImpares
+function promediosParesImpares() {
+    let numeros = [2, 5, 8, 9, 4, 7];
+    let sumaPares = 0, contadorPares = 0;
+    let sumaImpares = 0, contadorImpares = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            sumaPares += numeros[i];
+            contadorPares++;
+        } else {
+            sumaImpares += numeros[i];
+            contadorImpares++;
+        }
+    }
+
+    let promedioPares, promedioImpares;
+
+    if (contadorPares > 0) {
+        promedioPares = sumaPares / contadorPares;
+    } else {
+        promedioPares = 0;
+    }
+
+    if (contadorImpares > 0) {
+        promedioImpares = sumaImpares / contadorImpares;
+    } else {
+        promedioImpares = 0;
+    }
+
+    console.log("Promedio de pares: ", promedioPares);
+    console.log("Promedio de impares: ", promedioImpares);
